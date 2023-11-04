@@ -1,0 +1,10 @@
+<swiper-container
+  class="mySwiper"
+  navigation="true"
+  pagination="true"
+  css-mode="false"
+>
+  <swiper-slide *ngFor="let imagen of listaImagenes">
+    <img src="{{ imagen }}" width="100%" />
+  </swiper-slide>
+</swiper-container>

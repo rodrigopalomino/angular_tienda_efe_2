@@ -1,0 +1,11 @@
+<p class="h1 mb-5">Nuestras ofertas destacadas</p>
+
+<img
+  class="w-100 mb-3"
+  src="https://www.efe.com.pe/media/wysiwyg/efe-cintillos-3a_2.jpg"
+/>
+<swiper-container class="miSwiper mb-5" navigation="true" slides-per-view="5">
+  <swiper-slide *ngFor="let imagen of listaImagenes">
+    <img src="{{ imagen }}" width="100%" />
+  </swiper-slide>
+</swiper-container>

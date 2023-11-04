@@ -1,0 +1,796 @@
+<div class="container">
+  <!--Televisores-->
+  <div class="d-flex align-items-center mb-5">
+    <div class="svg d-flex align-items-center justify-content-center me-2">
+      <img src="../../../../../assets/tv.svg" />
+    </div>
+
+    <span class="h1">Televisores</span>
+  </div>
+
+  <swiper-container slides-per-view="5" navigation="true" pagination="true">
+    <swiper-slide *ngFor="let item of listaAccesoriosTecnologicos">
+      <!--Card-->
+      <div class="card border-0 me-3">
+        <!--Badge solo si hay oferta-->
+        <div
+          class="opacity-0 m-0"
+          [ngClass]="{ 'opacity-0': item.oferta == 0 }"
+        >
+          <span class="badge text-bg-warning">-{{ item.oferta }}%</span>
+        </div>
+
+        <!--Card image-->
+        <!-- <img src="{{ item.imagenes[0] }}" class="card-img-top" /> -->
+        <div class="card-img">
+          <img src="{{ item.imagenes[0] }}" class="img-fluid" />
+        </div>
+
+        <!--Card body-->
+        <div class="card-body">
+          <!--marca-->
+          <span class="card-marca">{{ item.marca }}</span>
+
+          <!--nombre-->
+          <h5 class="card-nombre">
+            {{ item.nombre }}
+          </h5>
+
+          <!--oferta-->
+          <div class="d-flex align-items-center">
+            <span class="card-precio-oferta text-primary me-3"
+              >S/ 1,099.00</span
+            >
+            <span
+              class="card-marca"
+              [ngClass]="{ 'opacity-0': item.oferta == 0 }"
+              >oferta</span
+            >
+          </div>
+
+          <!--precio-->
+          <span
+            class="card-precio"
+            [ngClass]="{
+              'text-decoration-line-through': item.oferta != 0,
+              'opacity-0': item.oferta == 0
+            }"
+            >S/ {{ item.precio }}</span
+          >
+
+          <!--boton-->
+          <div class="d-flex mt-2">
+            <button class="btn btn-primary me-3" style="font-size: 13px">
+              Agregar al carrito
+            </button>
+            <img src="{{ imagesPath }}/corazon.svg" width="24px" />
+          </div>
+        </div>
+      </div>
+    </swiper-slide>
+  </swiper-container>
+
+  <hr />
+
+  <!--Dermitorio-->
+  <div class="d-flex align-items-center mb-5">
+    <div class="svg d-flex align-items-center justify-content-center me-2">
+      <img src="../../../../../assets/tv.svg" />
+    </div>
+
+    <span class="h1">Dermitorio</span>
+  </div>
+
+  <swiper-container slides-per-view="5" navigation="true" pagination="true">
+    <swiper-slide *ngFor="let item of listaDormitorio">
+      <!--Card-->
+      <div class="card border-0 me-3">
+        <!--Badge solo si hay oferta-->
+        <div
+          class="opacity-0 m-0"
+          [ngClass]="{ 'opacity-0': item.oferta == 0 }"
+        >
+          <span class="badge text-bg-warning">-{{ item.oferta }}%</span>
+        </div>
+
+        <!--Card image-->
+        <!-- <img src="{{ item.imagenes[0] }}" class="card-img-top" /> -->
+        <div class="card-img">
+          <img src="{{ item.imagenes[0] }}" class="img-fluid" />
+        </div>
+
+        <!--Card body-->
+        <div class="card-body">
+          <!--marca-->
+          <span class="card-marca">{{ item.marca }}</span>
+
+          <!--nombre-->
+          <h5 class="card-nombre">
+            {{ item.nombre }}
+          </h5>
+
+          <!--oferta-->
+          <div class="d-flex align-items-center">
+            <span class="card-precio-oferta text-primary me-3"
+              >S/ 1,099.00</span
+            >
+            <span
+              class="card-marca"
+              [ngClass]="{ 'opacity-0': item.oferta == 0 }"
+              >oferta</span
+            >
+          </div>
+
+          <!--precio-->
+          <span
+            class="card-precio"
+            [ngClass]="{
+              'text-decoration-line-through': item.oferta != 0,
+              'opacity-0': item.oferta == 0
+            }"
+            >S/ {{ item.precio }}</span
+          >
+
+          <!--boton-->
+          <div class="d-flex mt-2">
+            <button class="btn btn-primary me-3" style="font-size: 13px">
+              Agregar al carrito
+            </button>
+            <img src="{{ imagesPath }}/corazon.svg" width="24px" />
+          </div>
+        </div>
+      </div>
+    </swiper-slide>
+  </swiper-container>
+
+  <hr />
+
+  <!--Celulares-->
+  <div class="d-flex align-items-center mb-5">
+    <div class="svg d-flex align-items-center justify-content-center me-2">
+      <img src="../../../../../assets/tv.svg" />
+    </div>
+
+    <span class="h1">Celulares</span>
+  </div>
+
+  <swiper-container slides-per-view="5" navigation="true" pagination="true">
+    <swiper-slide *ngFor="let item of listaCelulares">
+      <!--Card-->
+      <div class="card border-0 me-3">
+        <!--Badge solo si hay oferta-->
+        <div
+          class="opacity-0 m-0"
+          [ngClass]="{ 'opacity-0': item.oferta == 0 }"
+        >
+          <span class="badge text-bg-warning">-{{ item.oferta }}%</span>
+        </div>
+
+        <!--Card image-->
+        <!-- <img src="{{ item.imagenes[0] }}" class="card-img-top" /> -->
+        <div class="card-img">
+          <img src="{{ item.imagenes[0] }}" class="img-fluid" />
+        </div>
+
+        <!--Card body-->
+        <div class="card-body">
+          <!--marca-->
+          <span class="card-marca">{{ item.marca }}</span>
+
+          <!--nombre-->
+          <h5 class="card-nombre">
+            {{ item.nombre }}
+          </h5>
+
+          <!--oferta-->
+          <div class="d-flex align-items-center">
+            <span class="card-precio-oferta text-primary me-3"
+              >S/ 1,099.00</span
+            >
+            <span
+              class="card-marca"
+              [ngClass]="{ 'opacity-0': item.oferta == 0 }"
+              >oferta</span
+            >
+          </div>
+
+          <!--precio-->
+          <span
+            class="card-precio"
+            [ngClass]="{
+              'text-decoration-line-through': item.oferta != 0,
+              'opacity-0': item.oferta == 0
+            }"
+            >S/ {{ item.precio }}</span
+          >
+
+          <!--boton-->
+          <div class="d-flex mt-2">
+            <button class="btn btn-primary me-3" style="font-size: 13px">
+              Agregar al carrito
+            </button>
+            <img src="{{ imagesPath }}/corazon.svg" width="24px" />
+          </div>
+        </div>
+      </div>
+    </swiper-slide>
+  </swiper-container>
+
+  <hr />
+
+  <!--Accesorios Tecnologicos-->
+  <div class="d-flex align-items-center mb-5">
+    <div class="svg d-flex align-items-center justify-content-center me-2">
+      <img src="../../../../../assets/tv.svg" />
+    </div>
+
+    <span class="h1">Accesorios Tecnologicos</span>
+  </div>
+
+  <swiper-container slides-per-view="5" navigation="true" pagination="true">
+    <swiper-slide *ngFor="let item of listaAccesoriosTecnologicos">
+      <!--Card-->
+      <div class="card border-0 me-3">
+        <!--Badge solo si hay oferta-->
+        <div
+          class="opacity-0 m-0"
+          [ngClass]="{ 'opacity-0': item.oferta == 0 }"
+        >
+          <span class="badge text-bg-warning">-{{ item.oferta }}%</span>
+        </div>
+
+        <!--Card image-->
+        <!-- <img src="{{ item.imagenes[0] }}" class="card-img-top" /> -->
+        <div class="card-img">
+          <img src="{{ item.imagenes[0] }}" class="img-fluid" />
+        </div>
+
+        <!--Card body-->
+        <div class="card-body">
+          <!--marca-->
+          <span class="card-marca">{{ item.marca }}</span>
+
+          <!--nombre-->
+          <h5 class="card-nombre">
+            {{ item.nombre }}
+          </h5>
+
+          <!--oferta-->
+          <div class="d-flex align-items-center">
+            <span class="card-precio-oferta text-primary me-3"
+              >S/ 1,099.00</span
+            >
+            <span
+              class="card-marca"
+              [ngClass]="{ 'opacity-0': item.oferta == 0 }"
+              >oferta</span
+            >
+          </div>
+
+          <!--precio-->
+          <span
+            class="card-precio"
+            [ngClass]="{
+              'text-decoration-line-through': item.oferta != 0,
+              'opacity-0': item.oferta == 0
+            }"
+            >S/ {{ item.precio }}</span
+          >
+
+          <!--boton-->
+          <div class="d-flex mt-2">
+            <button class="btn btn-primary me-3" style="font-size: 13px">
+              Agregar al carrito
+            </button>
+            <img src="{{ imagesPath }}/corazon.svg" width="24px" />
+          </div>
+        </div>
+      </div>
+    </swiper-slide>
+  </swiper-container>
+
+  <hr />
+
+  <!--Computacion-->
+  <div class="d-flex align-items-center mb-5">
+    <div class="svg d-flex align-items-center justify-content-center me-2">
+      <img src="../../../../../assets/tv.svg" />
+    </div>
+
+    <span class="h1">Computacion</span>
+  </div>
+
+  <swiper-container slides-per-view="5" navigation="true" pagination="true">
+    <swiper-slide *ngFor="let item of listaComputacion">
+      <!--Card-->
+      <div class="card border-0 me-3">
+        <!--Badge solo si hay oferta-->
+        <div
+          class="opacity-0 m-0"
+          [ngClass]="{ 'opacity-0': item.oferta == 0 }"
+        >
+          <span class="badge text-bg-warning">-{{ item.oferta }}%</span>
+        </div>
+
+        <!--Card image-->
+        <!-- <img src="{{ item.imagenes[0] }}" class="card-img-top" /> -->
+        <div class="card-img">
+          <img src="{{ item.imagenes[0] }}" class="img-fluid" />
+        </div>
+
+        <!--Card body-->
+        <div class="card-body">
+          <!--marca-->
+          <span class="card-marca">{{ item.marca }}</span>
+
+          <!--nombre-->
+          <h5 class="card-nombre">
+            {{ item.nombre }}
+          </h5>
+
+          <!--oferta-->
+          <div class="d-flex align-items-center">
+            <span class="card-precio-oferta text-primary me-3"
+              >S/ 1,099.00</span
+            >
+            <span
+              class="card-marca"
+              [ngClass]="{ 'opacity-0': item.oferta == 0 }"
+              >oferta</span
+            >
+          </div>
+
+          <!--precio-->
+          <span
+            class="card-precio"
+            [ngClass]="{
+              'text-decoration-line-through': item.oferta != 0,
+              'opacity-0': item.oferta == 0
+            }"
+            >S/ {{ item.precio }}</span
+          >
+
+          <!--boton-->
+          <div class="d-flex mt-2">
+            <button class="btn btn-primary me-3" style="font-size: 13px">
+              Agregar al carrito
+            </button>
+            <img src="{{ imagesPath }}/corazon.svg" width="24px" />
+          </div>
+        </div>
+      </div>
+    </swiper-slide>
+  </swiper-container>
+
+  <hr />
+
+  <!--Digital-->
+  <div class="d-flex align-items-center mb-5">
+    <div class="svg d-flex align-items-center justify-content-center me-2">
+      <img src="../../../../../assets/tv.svg" />
+    </div>
+
+    <span class="h1">Digital</span>
+  </div>
+
+  <swiper-container slides-per-view="5" navigation="true" pagination="true">
+    <swiper-slide *ngFor="let item of listaDigital">
+      <!--Card-->
+      <div class="card border-0 me-3">
+        <!--Badge solo si hay oferta-->
+        <div
+          class="opacity-0 m-0"
+          [ngClass]="{ 'opacity-0': item.oferta == 0 }"
+        >
+          <span class="badge text-bg-warning">-{{ item.oferta }}%</span>
+        </div>
+
+        <!--Card image-->
+        <!-- <img src="{{ item.imagenes[0] }}" class="card-img-top" /> -->
+        <div class="card-img">
+          <img src="{{ item.imagenes[0] }}" class="img-fluid" />
+        </div>
+
+        <!--Card body-->
+        <div class="card-body">
+          <!--marca-->
+          <span class="card-marca">{{ item.marca }}</span>
+
+          <!--nombre-->
+          <h5 class="card-nombre">
+            {{ item.nombre }}
+          </h5>
+
+          <!--oferta-->
+          <div class="d-flex align-items-center">
+            <span class="card-precio-oferta text-primary me-3"
+              >S/ 1,099.00</span
+            >
+            <span
+              class="card-marca"
+              [ngClass]="{ 'opacity-0': item.oferta == 0 }"
+              >oferta</span
+            >
+          </div>
+
+          <!--precio-->
+          <span
+            class="card-precio"
+            [ngClass]="{
+              'text-decoration-line-through': item.oferta != 0,
+              'opacity-0': item.oferta == 0
+            }"
+            >S/ {{ item.precio }}</span
+          >
+
+          <!--boton-->
+          <div class="d-flex mt-2">
+            <button class="btn btn-primary me-3" style="font-size: 13px">
+              Agregar al carrito
+            </button>
+            <img src="{{ imagesPath }}/corazon.svg" width="24px" />
+          </div>
+        </div>
+      </div>
+    </swiper-slide>
+  </swiper-container>
+
+  <hr />
+
+  <!--Hogar-->
+  <div class="d-flex align-items-center mb-5">
+    <div class="svg d-flex align-items-center justify-content-center me-2">
+      <img src="../../../../../assets/tv.svg" />
+    </div>
+
+    <span class="h1">Hogar</span>
+  </div>
+
+  <swiper-container slides-per-view="5" navigation="true" pagination="true">
+    <swiper-slide *ngFor="let item of listaHogar">
+      <!--Card-->
+      <div class="card border-0 me-3">
+        <!--Badge solo si hay oferta-->
+        <div
+          class="opacity-0 m-0"
+          [ngClass]="{ 'opacity-0': item.oferta == 0 }"
+        >
+          <span class="badge text-bg-warning">-{{ item.oferta }}%</span>
+        </div>
+
+        <!--Card image-->
+        <!-- <img src="{{ item.imagenes[0] }}" class="card-img-top" /> -->
+        <div class="card-img">
+          <img src="{{ item.imagenes[0] }}" class="img-fluid" />
+        </div>
+
+        <!--Card body-->
+        <div class="card-body">
+          <!--marca-->
+          <span class="card-marca">{{ item.marca }}</span>
+
+          <!--nombre-->
+          <h5 class="card-nombre">
+            {{ item.nombre }}
+          </h5>
+
+          <!--oferta-->
+          <div class="d-flex align-items-center">
+            <span class="card-precio-oferta text-primary me-3"
+              >S/ 1,099.00</span
+            >
+            <span
+              class="card-marca"
+              [ngClass]="{ 'opacity-0': item.oferta == 0 }"
+              >oferta</span
+            >
+          </div>
+
+          <!--precio-->
+          <span
+            class="card-precio"
+            [ngClass]="{
+              'text-decoration-line-through': item.oferta != 0,
+              'opacity-0': item.oferta == 0
+            }"
+            >S/ {{ item.precio }}</span
+          >
+
+          <!--boton-->
+          <div class="d-flex mt-2">
+            <button class="btn btn-primary me-3" style="font-size: 13px">
+              Agregar al carrito
+            </button>
+            <img src="{{ imagesPath }}/corazon.svg" width="24px" />
+          </div>
+        </div>
+      </div>
+    </swiper-slide>
+  </swiper-container>
+
+  <hr />
+
+  <!--Electrohogar-->
+  <div class="d-flex align-items-center mb-5">
+    <div class="svg d-flex align-items-center justify-content-center me-2">
+      <img src="../../../../../assets/tv.svg" />
+    </div>
+
+    <span class="h1">Electrohogar</span>
+  </div>
+
+  <swiper-container slides-per-view="5" navigation="true" pagination="true">
+    <swiper-slide *ngFor="let item of listaElectrohogar">
+      <!--Card-->
+      <div class="card border-0 me-3">
+        <!--Badge solo si hay oferta-->
+        <div
+          class="opacity-0 m-0"
+          [ngClass]="{ 'opacity-0': item.oferta == 0 }"
+        >
+          <span class="badge text-bg-warning">-{{ item.oferta }}%</span>
+        </div>
+
+        <!--Card image-->
+        <!-- <img src="{{ item.imagenes[0] }}" class="card-img-top" /> -->
+        <div class="card-img">
+          <img src="{{ item.imagenes[0] }}" class="img-fluid" />
+        </div>
+
+        <!--Card body-->
+        <div class="card-body">
+          <!--marca-->
+          <span class="card-marca">{{ item.marca }}</span>
+
+          <!--nombre-->
+          <h5 class="card-nombre">
+            {{ item.nombre }}
+          </h5>
+
+          <!--oferta-->
+          <div class="d-flex align-items-center">
+            <span class="card-precio-oferta text-primary me-3"
+              >S/ 1,099.00</span
+            >
+            <span
+              class="card-marca"
+              [ngClass]="{ 'opacity-0': item.oferta == 0 }"
+              >oferta</span
+            >
+          </div>
+
+          <!--precio-->
+          <span
+            class="card-precio"
+            [ngClass]="{
+              'text-decoration-line-through': item.oferta != 0,
+              'opacity-0': item.oferta == 0
+            }"
+            >S/ {{ item.precio }}</span
+          >
+
+          <!--boton-->
+          <div class="d-flex mt-2">
+            <button class="btn btn-primary me-3" style="font-size: 13px">
+              Agregar al carrito
+            </button>
+            <img src="{{ imagesPath }}/corazon.svg" width="24px" />
+          </div>
+        </div>
+      </div>
+    </swiper-slide>
+  </swiper-container>
+
+  <hr />
+
+  <!--Smart Home-->
+  <div class="d-flex align-items-center mb-5">
+    <div class="svg d-flex align-items-center justify-content-center me-2">
+      <img src="../../../../../assets/tv.svg" />
+    </div>
+
+    <span class="h1">Smart Home</span>
+  </div>
+
+  <swiper-container slides-per-view="5" navigation="true" pagination="true">
+    <swiper-slide *ngFor="let item of listaSmartHome">
+      <!--Card-->
+      <div class="card border-0 me-3">
+        <!--Badge solo si hay oferta-->
+        <div
+          class="opacity-0 m-0"
+          [ngClass]="{ 'opacity-0': item.oferta == 0 }"
+        >
+          <span class="badge text-bg-warning">-{{ item.oferta }}%</span>
+        </div>
+
+        <!--Card image-->
+        <!-- <img src="{{ item.imagenes[0] }}" class="card-img-top" /> -->
+        <div class="card-img">
+          <img src="{{ item.imagenes[0] }}" class="img-fluid" />
+        </div>
+
+        <!--Card body-->
+        <div class="card-body">
+          <!--marca-->
+          <span class="card-marca">{{ item.marca }}</span>
+
+          <!--nombre-->
+          <h5 class="card-nombre">
+            {{ item.nombre }}
+          </h5>
+
+          <!--oferta-->
+          <div class="d-flex align-items-center">
+            <span class="card-precio-oferta text-primary me-3"
+              >S/ 1,099.00</span
+            >
+            <span
+              class="card-marca"
+              [ngClass]="{ 'opacity-0': item.oferta == 0 }"
+              >oferta</span
+            >
+          </div>
+
+          <!--precio-->
+          <span
+            class="card-precio"
+            [ngClass]="{
+              'text-decoration-line-through': item.oferta != 0,
+              'opacity-0': item.oferta == 0
+            }"
+            >S/ {{ item.precio }}</span
+          >
+
+          <!--boton-->
+          <div class="d-flex mt-2">
+            <button class="btn btn-primary me-3" style="font-size: 13px">
+              Agregar al carrito
+            </button>
+            <img src="{{ imagesPath }}/corazon.svg" width="24px" />
+          </div>
+        </div>
+      </div>
+    </swiper-slide>
+  </swiper-container>
+
+  <hr />
+
+  <!--Deporte-->
+  <div class="d-flex align-items-center mb-5">
+    <div class="svg d-flex align-items-center justify-content-center me-2">
+      <img src="../../../../../assets/tv.svg" />
+    </div>
+
+    <span class="h1">Deporte</span>
+  </div>
+
+  <swiper-container slides-per-view="5" navigation="true" pagination="true">
+    <swiper-slide *ngFor="let item of listaDeporte">
+      <!--Card-->
+      <div class="card border-0 me-3">
+        <!--Badge solo si hay oferta-->
+        <div
+          class="opacity-0 m-0"
+          [ngClass]="{ 'opacity-0': item.oferta == 0 }"
+        >
+          <span class="badge text-bg-warning">-{{ item.oferta }}%</span>
+        </div>
+
+        <!--Card image-->
+        <!-- <img src="{{ item.imagenes[0] }}" class="card-img-top" /> -->
+        <div class="card-img">
+          <img src="{{ item.imagenes[0] }}" class="img-fluid" />
+        </div>
+
+        <!--Card body-->
+        <div class="card-body">
+          <!--marca-->
+          <span class="card-marca">{{ item.marca }}</span>
+
+          <!--nombre-->
+          <h5 class="card-nombre">
+            {{ item.nombre }}
+          </h5>
+
+          <!--oferta-->
+          <div class="d-flex align-items-center">
+            <span class="card-precio-oferta text-primary me-3"
+              >S/ 1,099.00</span
+            >
+            <span
+              class="card-marca"
+              [ngClass]="{ 'opacity-0': item.oferta == 0 }"
+              >oferta</span
+            >
+          </div>
+
+          <!--precio-->
+          <span
+            class="card-precio"
+            [ngClass]="{
+              'text-decoration-line-through': item.oferta != 0,
+              'opacity-0': item.oferta == 0
+            }"
+            >S/ {{ item.precio }}</span
+          >
+
+          <!--boton-->
+          <div class="d-flex mt-2">
+            <button class="btn btn-primary me-3" style="font-size: 13px">
+              Agregar al carrito
+            </button>
+            <img src="{{ imagesPath }}/corazon.svg" width="24px" />
+          </div>
+        </div>
+      </div>
+    </swiper-slide>
+  </swiper-container>
+</div>
+
+<!--Multiservicios-->
+<div class="multi">
+  <div class="container pt-5">
+    <div class="text-center mb-5">
+      <span class="h1">Televisores</span>
+    </div>
+    <swiper-container slides-per-view="5" navigation="true" pagination="true">
+      <swiper-slide *ngFor="let item of listaMultiservicios">
+        <!--Card-->
+        <div class="card border me-3 mt-0">
+          <!--Badge solo si hay oferta-->
+          <div class="opacity-0" [ngClass]="{ 'opacity-0': item.oferta == 0 }">
+            <span class="badge text-bg-warning">-{{ item.oferta }}%</span>
+          </div>
+
+          <!--Card image-->
+          <!-- <img src="{{ item.imagenes[0] }}" class="card-img-top" /> -->
+          <div class="card-img">
+            <img src="{{ item.imagenes[0] }}" class="img-fluid" />
+          </div>
+
+          <!--Card body-->
+          <div class="card-body">
+            <!--marca-->
+            <span class="card-marca">{{ item.marca }}</span>
+
+            <!--nombre-->
+            <h5 class="card-nombre">
+              {{ item.nombre }}
+            </h5>
+
+            <!--oferta-->
+            <div class="d-flex align-items-center">
+              <span class="card-precio-oferta text-primary me-3"
+                >S/ 1,099.00</span
+              >
+              <span
+                class="card-marca"
+                [ngClass]="{ 'opacity-0': item.oferta == 0 }"
+                >oferta</span
+              >
+            </div>
+
+            <!--precio-->
+            <span
+              class="card-precio"
+              [ngClass]="{
+                'text-decoration-line-through': item.oferta != 0,
+                'opacity-0': item.oferta == 0
+              }"
+              >S/ {{ item.precio }}</span
+            >
+
+            <!--boton-->
+            <div class="d-flex mt-2">
+              <button class="btn btn-primary me-3" style="font-size: 13px">
+                Agregar al carrito
+              </button>
+              <img src="{{ imagesPath }}/corazon.svg" width="24px" />
+            </div>
+          </div>
+        </div>
+      </swiper-slide>
+    </swiper-container>
+  </div>
+</div>

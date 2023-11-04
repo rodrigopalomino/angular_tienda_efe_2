@@ -1,0 +1,97 @@
+<nav class="navbar navbar-expand-md w-100" id="navbar">
+  <div class="container-xl">
+    <!--Logo-->
+    <a class="navbar-brand" href="#">
+      <img
+        class="logo"
+        src="https://www.efe.com.pe/static/version1694431759/frontend/Grupoefe/default/es_PE/images/logo-efe-160.png"
+      />
+    </a>
+
+    <!--toggle bar-->
+    <button class="navbar-toggler me-auto" type="button" id="toggle-navbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!--=============================================-->
+    <div class="navbar-toggler me-auto border-0">
+      <div class="d-flex justify-content-center">
+        <form class="me-3" id="form-navbar">
+          <div class="input-group h-100">
+            <input class="form form-control" type="text" />
+            <button class="btn btn-warning">
+              <img class="mb-1 p-1" src="{{ imagesPath }}search.svg" alt="" />
+            </button>
+          </div>
+        </form>
+
+        <li class="nav-item d-flex align-items-center">
+          <img src="{{ imagesPath }}cart.svg" alt="" />
+        </li>
+      </div>
+    </div>
+    <!--=============================================-->
+    <!--contenido-->
+    <div class="collapse navbar-collapse d-xl-flex flex-column">
+      <!--Arriba-->
+      <ul class="navbar-nav me-auto mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link text-light" href="#">Localizador de Tienda</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link text-light" href="#">Compras en vivo</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link text-light" href="#">Mi lista de deseos</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link text-light" href="#">Juntoz Tu Mail Online</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link text-light" href="#">Motocorp.pe</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link text-light" href="#">Multiservicios</a>
+        </li>
+      </ul>
+
+      <!--Abajo-->
+      <ul class="navbar-nav me-auto mt-2 h-navbar w-100">
+        <li class="nav-item me-3">
+          <button class="btn btn-outline-light">
+            <img class="mb-1" src="{{ imagesPath }}list.svg" alt="" />
+            Categorias
+          </button>
+        </li>
+
+        <form class="me-3 navbar-buscador">
+          <div class="input-group h-100">
+            <input class="form form-control" type="text" name="" id="" />
+            <button class="btn btn-warning">
+              <img class="mb-1 p-1" src="{{ imagesPath }}search.svg" alt="" />
+            </button>
+          </div>
+        </form>
+
+        <li class="nav-item d-flex align-items-center">
+          <img src="{{ imagesPath }}truck.svg" alt="" />
+          <a class="nav-link text-light" href="#">Sigue tu pedido</a>
+        </li>
+
+        <li class="nav-item d-flex align-items-center">
+          <img src="{{ imagesPath }}user.svg" alt="" />
+          <a class="nav-link text-light" href="#">Mi cuenta</a>
+        </li>
+
+        <li class="nav-item d-flex align-items-center">
+          <img src="{{ imagesPath }}cart.svg" alt="" />
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

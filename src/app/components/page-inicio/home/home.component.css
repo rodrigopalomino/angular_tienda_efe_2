@@ -1,0 +1,12 @@
+.cintillo {
+  background: #012949;
+}
+
+.categorias {
+  background: #002849;
+  height: 48px;
+}
+
+.categorias span {
+  font-size: 12px;
+}

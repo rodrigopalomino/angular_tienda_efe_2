@@ -9,6 +9,13 @@ const routes: Routes = [
         (m) => m.PageInicioModule
       ),
   },
+  {
+    path: 'ver',
+    loadChildren: () =>
+      import('./components/productos/productos.module').then(
+        (m) => m.ProductosModule
+      ),
+  },
 ];
 
 @NgModule({

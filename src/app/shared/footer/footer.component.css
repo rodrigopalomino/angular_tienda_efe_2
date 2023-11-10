@@ -1,0 +1,52 @@
+.txt-12 {
+  font-size: 12px;
+}
+
+.txt-14 {
+  font-size: 14px;
+}
+
+.txt-16 {
+  font-size: 16px;
+}
+
+.txt-34 {
+  font-size: 34px;
+}
+
+.txt-font-bold {
+  font-weight: bold;
+}
+
+.form {
+  width: 36%;
+  margin: 6rem auto;
+}
+
+.row input,
+button {
+  height: 50px;
+}
+
+.mx-6 {
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+.barra {
+  background: #002849;
+  color: white;
+}
+
+.barra img {
+  width: 40px;
+}
+
+.span-1 {
+  font-size: 14px;
+}
+
+.span-2 {
+  color: #aacce8;
+  font-size: 12px;
+}

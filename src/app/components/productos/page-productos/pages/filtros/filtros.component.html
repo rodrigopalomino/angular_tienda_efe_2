@@ -1,0 +1,14 @@
+<div [ngClass]="{ 'd-none': categorias.length == 0 }">
+  <hr class="w-100 mt-0" />
+
+  <span class="txt-16 font-weight-bold">Categoria</span>
+
+  <div class="d-flex flex-column mt-3">
+    <span
+      *ngFor="let categoria of categorias"
+      (click)="clickCategoria(categoria.nombre)"
+      class="txt-14 my-1"
+      >{{ categoria.nombre }} ({{ categoria.cantidad_productos }})</span
+    >
+  </div>
+</div>

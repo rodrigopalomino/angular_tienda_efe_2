@@ -1,0 +1,36 @@
+<app-navbar></app-navbar>
+
+<div class="container pt-4">
+  <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">Inicio</li>
+      <li class="breadcrumb-item" [ngClass]="{ 'd-none': !general }">
+        {{ general }}
+      </li>
+      <li class="breadcrumb-item" [ngClass]="{ 'd-none': !categoria }">
+        {{ categoria }}
+      </li>
+      <li class="breadcrumb-item" [ngClass]="{ 'd-none': !subcategoria }">
+        {{ subcategoria }}
+      </li>
+    </ol>
+  </nav>
+
+  <h1 class="h1" [ngClass]="{ 'd-none': categoria }">{{ general }}</h1>
+  <h1 class="h1" [ngClass]="{ 'd-none': subcategoria }">{{ categoria }}</h1>
+  <h1 class="h1">{{ subcategoria }}</h1>
+
+  <div class="d-flex mt-4" *ngIf="categoriaActual">
+    <app-filtros
+      [categoria_id]="categoriaActual.categoria_id"
+      class="me-5"
+    ></app-filtros>
+    <app-lista-productos
+      [categoria_id]="categoriaActual.categoria_id"
+      [page]="page"
+      [nombre]="ultimo"
+    ></app-lista-productos>
+  </div>
+</div>
+
+<app-footer></app-footer>

@@ -1,0 +1,32 @@
+.card-img {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+}
+
+.card-img img {
+  height: 13rem;
+}
+
+.card-marca {
+  font-size: 13px;
+  color: #4c6980;
+}
+
+.card-nombre {
+  font-size: 16px;
+  font-weight: 500;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.card-precio-oferta {
+  font-size: 22px;
+  color: #0071ce;
+}
+
+.card-precio {
+  font-size: 15px;
+}

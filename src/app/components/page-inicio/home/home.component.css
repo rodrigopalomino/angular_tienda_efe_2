@@ -10,3 +10,21 @@
 .categorias span {
   font-size: 12px;
 }
+
+.barra {
+  background: #002849;
+  color: white;
+}
+
+.barra img {
+  width: 40px;
+}
+
+.span-1 {
+  font-size: 14px;
+}
+
+.span-2 {
+  color: #aacce8;
+  font-size: 12px;
+}

@@ -53,7 +53,19 @@ export class LisaProductosComponent implements OnInit, OnChanges {
       )
       .subscribe((data) => {
         this.listaProductos = data;
+        this.scrollToTopWithAnimation();
       });
+  }
+
+  scrollToTopWithAnimation() {
+    const scrollStep = -window.scrollY / (500 / 15);
+    const scrollInterval = setInterval(() => {
+      if (window.scrollY !== 0) {
+        window.scrollBy(0, scrollStep);
+      } else {
+        clearInterval(scrollInterval);
+      }
+    }, 15);
   }
 
   getRow() {
@@ -84,5 +96,10 @@ export class LisaProductosComponent implements OnInit, OnChanges {
       queryParams: { page: this.row },
     });
     this.getProductos();
+  }
+
+  clickCard(nombre: string) {
+    console.log('click', nombre);
+    this.router.navigate([nombre]);
   }
 }

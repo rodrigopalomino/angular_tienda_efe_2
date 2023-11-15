@@ -1,19 +1,24 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './page-productos/home/home.component';
+import { HomeProductosComponent } from './page-productos/home/home.component';
+import HomeProductoComponent from './page-producto/home/home.component';
 
 const routes: Routes = [
   {
-    path: ':general',
-    component: HomeComponent,
+    path: 'ver/:general',
+    component: HomeProductosComponent,
   },
   {
-    path: ':general/:categoria',
-    component: HomeComponent,
+    path: 'ver/:general/:categoria',
+    component: HomeProductosComponent,
   },
   {
-    path: ':general/:categoria/:subcategoria',
-    component: HomeComponent,
+    path: 'ver/:general/:categoria/:subcategoria',
+    component: HomeProductosComponent,
+  },
+  {
+    path: ':nombre',
+    component: HomeProductoComponent,
   },
 ];
 

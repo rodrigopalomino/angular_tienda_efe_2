@@ -10,7 +10,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: 'ver',
+    path: '',
     loadChildren: () =>
       import('./components/productos/productos.module').then(
         (m) => m.ProductosModule

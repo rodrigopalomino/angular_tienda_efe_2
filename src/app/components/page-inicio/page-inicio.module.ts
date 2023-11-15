@@ -7,10 +7,16 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { CarruselHomeComponent } from './pages/carrusel-home/carrusel-home.component';
 import { CarruselOfertasComponent } from './pages/carrusel-ofertas/carrusel-ofertas.component';
 import { CarruselesComponent } from './pages/carruseles/carruseles.component';
+import { PipeModule } from 'src/app/pipe/pipe.module';
 
 @NgModule({
-  declarations: [HomeComponent, CarruselHomeComponent, CarruselOfertasComponent, CarruselesComponent],
-  imports: [CommonModule, PageInicioRoutingModule, SharedModule],
+  declarations: [
+    HomeComponent,
+    CarruselHomeComponent,
+    CarruselOfertasComponent,
+    CarruselesComponent,
+  ],
+  imports: [CommonModule, PageInicioRoutingModule, SharedModule, PipeModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class PageInicioModule {}

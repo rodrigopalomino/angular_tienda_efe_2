@@ -18,7 +18,7 @@
     *ngFor="let producto of listaProductos"
     class="col d-flex justify-content-end"
   >
-    <div class="card w-100 border-0">
+    <div class="card w-100 border-0" (click)="clickCard(producto.nombre)">
       <!--Card-img-->
       <div class="card-img">
         <img src="{{ producto.imagenes[0] }}" />
@@ -36,7 +36,10 @@
         <!--Card-precio-->
         <div class="">
           <div class="d-flex align-items-center">
-            <span class="card-precio-oferta me-3">S/ 19.90</span>
+            <!-- <span class="card-precio-oferta me-3">{{(producto.precio * (100 - producto.oferta)) / 100  }}</span> -->
+            <span class="card-precio-oferta me-3">{{
+              producto.precio | precio : producto.oferta
+            }}</span>
             <span class="card-marca">Oferta</span>
           </div>
 

@@ -8,7 +8,7 @@ import { CategoriaService } from 'src/app/services/categoria.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
-export class HomeComponent implements OnInit {
+export class HomeProductosComponent implements OnInit {
   general: string = '';
   categoria: string = '';
   subcategoria: string = '';
@@ -23,13 +23,9 @@ export class HomeComponent implements OnInit {
       this.general = params['general'];
       this.categoria = params['categoria'];
       this.subcategoria = params['subcategoria'];
-      // console.log(this.general);
-      // console.log(this.categoria);
-      // console.log(this.subcategoria);
     });
     this.route.queryParams.subscribe((queryParams) => {
       this.page = queryParams['page'] || 1;
-      // console.log(this.page);
     });
   }
 

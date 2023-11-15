@@ -26,6 +26,10 @@ export class ProductoService {
     });
   }
 
+  getProducto(nombre: string) {
+    return this.http.get<Producto>(`${this.myApi}${this.myApp}/${nombre}`);
+  }
+
   countProducto(categoria: number): Observable<number> {
     return this.http.get<number>(
       `${this.myApi}${this.myApp}/count/${categoria}`

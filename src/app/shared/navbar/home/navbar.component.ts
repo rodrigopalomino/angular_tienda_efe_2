@@ -45,7 +45,12 @@ export class NavbarComponent implements OnInit {
   }
 
   clickProductoSpan(nombre: string) {
-    console.log(nombre);
     this.router.navigate([nombre]);
+  }
+
+  clickButton() {
+    if (this.nombre !== '') {
+      this.router.navigate(['search', this.nombre]);
+    }
   }
 }

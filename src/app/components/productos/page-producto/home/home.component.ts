@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Producto } from 'src/app/interfaces/producto';
 import { ProductoService } from 'src/app/services/producto.service';
 
 @Component({
@@ -9,6 +10,7 @@ import { ProductoService } from 'src/app/services/producto.service';
 })
 export default class HomeProductoComponent implements OnInit {
   nombre!: string;
+  producto!: Producto;
 
   constructor(
     private route: ActivatedRoute,
@@ -28,8 +30,8 @@ export default class HomeProductoComponent implements OnInit {
 
   getProducto() {
     this._productoServices.getProducto(this.nombre).subscribe((data) => {
-      console.log(data);
-      console.log(data.imagenes);
+      this.producto = data;
+      console.log(this.producto);
     });
   }
 }

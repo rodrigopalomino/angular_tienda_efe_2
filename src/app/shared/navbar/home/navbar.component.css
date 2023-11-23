@@ -118,3 +118,14 @@
 .categorias.activo {
   opacity: 1;
 }
+
+.input-productos {
+  position: absolute;
+  width: 100%;
+  height: fit-content;
+  border-radius: 5px;
+  top: 45px;
+  left: 0;
+  z-index: 100;
+  background: white;
+}

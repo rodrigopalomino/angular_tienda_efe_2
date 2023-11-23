@@ -1,1 +1,18 @@
-<p>informacion works!</p>
+<span>{{ marca }}</span>
+<h1>{{ nombre }}</h1>
+<span>{{ sku }}</span>
+
+<div>
+  <span>S/ {{ (precio * (100 - oferta)) / 100 }}</span>
+  <span>oferta</span>
+</div>
+
+<span>S/ {{ precio }}</span>
+
+<div>
+  <button type="button" (click)="clickMenos()">-</button>
+  <span>{{ numero }}</span>
+  <button type="button" (click)="clickMas()">+</button>
+</div>
+
+<button>Agregar al carrito</button>

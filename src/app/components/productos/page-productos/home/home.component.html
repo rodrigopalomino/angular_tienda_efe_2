@@ -23,12 +23,14 @@
   <div class="d-flex mt-4" *ngIf="categoriaActual">
     <app-filtros
       [categoria_id]="categoriaActual.categoria_id"
+      [search]="nombre"
       class="me-5"
     ></app-filtros>
     <app-lista-productos
       [categoria_id]="categoriaActual.categoria_id"
       [page]="page"
       [nombre]="ultimo"
+      [search]="nombre"
     ></app-lista-productos>
   </div>
 </div>

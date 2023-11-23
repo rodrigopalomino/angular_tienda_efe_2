@@ -3,3 +3,23 @@
 * {
   font-family: "Poppins", sans-serif;
 }
+
+.bg-custom {
+  background: var(--background);
+}
+
+.color-custom {
+  color: var(--color);
+}
+
+.width-custom {
+  width: var(--width);
+}
+
+.height-custom {
+  height: var(--height);
+}
+
+.font-size-custom {
+  font-size: var(--font-size);
+}

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { forkJoin } from 'rxjs';
+import { Router } from '@angular/router';
 import { Producto } from 'src/app/interfaces/producto';
 import { ProductoService } from 'src/app/services/producto.service';
 
@@ -23,7 +23,10 @@ export class CarruselesComponent implements OnInit {
   listaDeporte: Producto[] = [];
   listaMultiservicios: Producto[] = [];
 
-  constructor(private _productoServices: ProductoService) {}
+  constructor(
+    private _productoServices: ProductoService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.getListas();
@@ -63,5 +66,10 @@ export class CarruselesComponent implements OnInit {
     this._productoServices.getProductosDestacados(11).subscribe((data) => {
       this.listaMultiservicios = data;
     });
+  }
+
+  clickCard(nombre: string) {
+    console.log('click', nombre);
+    this.router.navigate([nombre]);
   }
 }

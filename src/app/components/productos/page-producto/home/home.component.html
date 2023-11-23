@@ -1,1 +1,25 @@
-<p>home works!</p>
+<app-navbar></app-navbar>
+
+<div class="container d-flex my-5" *ngIf="producto">
+  <app-imagenes
+    class="w-50"
+    [imagenes]="producto.imagenes"
+    [oferta]="producto.oferta"
+  ></app-imagenes>
+  <app-informacion
+    class="w-50"
+    [marca]="producto.marca"
+    [sku]="producto.sku"
+    [nombre]="producto.nombre"
+    [precio]="producto.precio"
+    [oferta]="producto.oferta"
+  ></app-informacion>
+</div>
+
+<div *ngIf="producto">
+  <app-detalle
+    [descripcion]="producto.descripcion || ''"
+    [especificaciones]="producto.especificaciones || []"
+    [campos]="producto.campos || []"
+  ></app-detalle>
+</div>

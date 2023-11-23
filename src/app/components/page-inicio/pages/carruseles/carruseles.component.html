@@ -9,7 +9,10 @@
   </div>
 
   <swiper-container slides-per-view="5" navigation="true" pagination="true">
-    <swiper-slide *ngFor="let item of listaAccesoriosTecnologicos">
+    <swiper-slide
+      *ngFor="let item of listaAccesoriosTecnologicos"
+      (click)="clickCard(item.nombre)"
+    >
       <!--Card-->
       <div class="card border-0 me-3">
         <!--Badge solo si hay oferta-->
@@ -82,7 +85,10 @@
   </div>
 
   <swiper-container slides-per-view="5" navigation="true" pagination="true">
-    <swiper-slide *ngFor="let item of listaDormitorio">
+    <swiper-slide
+      *ngFor="let item of listaDormitorio"
+      (click)="clickCard(item.nombre)"
+    >
       <!--Card-->
       <div class="card border-0 me-3">
         <!--Badge solo si hay oferta-->
@@ -155,7 +161,10 @@
   </div>
 
   <swiper-container slides-per-view="5" navigation="true" pagination="true">
-    <swiper-slide *ngFor="let item of listaCelulares">
+    <swiper-slide
+      *ngFor="let item of listaCelulares"
+      (click)="clickCard(item.nombre)"
+    >
       <!--Card-->
       <div class="card border-0 me-3">
         <!--Badge solo si hay oferta-->
@@ -228,7 +237,10 @@
   </div>
 
   <swiper-container slides-per-view="5" navigation="true" pagination="true">
-    <swiper-slide *ngFor="let item of listaAccesoriosTecnologicos">
+    <swiper-slide
+      *ngFor="let item of listaAccesoriosTecnologicos"
+      (click)="clickCard(item.nombre)"
+    >
       <!--Card-->
       <div class="card border-0 me-3">
         <!--Badge solo si hay oferta-->
@@ -301,7 +313,10 @@
   </div>
 
   <swiper-container slides-per-view="5" navigation="true" pagination="true">
-    <swiper-slide *ngFor="let item of listaComputacion">
+    <swiper-slide
+      *ngFor="let item of listaComputacion"
+      (click)="clickCard(item.nombre)"
+    >
       <!--Card-->
       <div class="card border-0 me-3">
         <!--Badge solo si hay oferta-->
@@ -374,7 +389,10 @@
   </div>
 
   <swiper-container slides-per-view="5" navigation="true" pagination="true">
-    <swiper-slide *ngFor="let item of listaDigital">
+    <swiper-slide
+      *ngFor="let item of listaDigital"
+      (click)="clickCard(item.nombre)"
+    >
       <!--Card-->
       <div class="card border-0 me-3">
         <!--Badge solo si hay oferta-->
@@ -447,7 +465,10 @@
   </div>
 
   <swiper-container slides-per-view="5" navigation="true" pagination="true">
-    <swiper-slide *ngFor="let item of listaHogar">
+    <swiper-slide
+      *ngFor="let item of listaHogar"
+      (click)="clickCard(item.nombre)"
+    >
       <!--Card-->
       <div class="card border-0 me-3">
         <!--Badge solo si hay oferta-->
@@ -520,7 +541,10 @@
   </div>
 
   <swiper-container slides-per-view="5" navigation="true" pagination="true">
-    <swiper-slide *ngFor="let item of listaElectrohogar">
+    <swiper-slide
+      *ngFor="let item of listaElectrohogar"
+      (click)="clickCard(item.nombre)"
+    >
       <!--Card-->
       <div class="card border-0 me-3">
         <!--Badge solo si hay oferta-->
@@ -593,7 +617,10 @@
   </div>
 
   <swiper-container slides-per-view="5" navigation="true" pagination="true">
-    <swiper-slide *ngFor="let item of listaSmartHome">
+    <swiper-slide
+      *ngFor="let item of listaSmartHome"
+      (click)="clickCard(item.nombre)"
+    >
       <!--Card-->
       <div class="card border-0 me-3">
         <!--Badge solo si hay oferta-->
@@ -666,7 +693,10 @@
   </div>
 
   <swiper-container slides-per-view="5" navigation="true" pagination="true">
-    <swiper-slide *ngFor="let item of listaDeporte">
+    <swiper-slide
+      *ngFor="let item of listaDeporte"
+      (click)="clickCard(item.nombre)"
+    >
       <!--Card-->
       <div class="card border-0 me-3">
         <!--Badge solo si hay oferta-->
@@ -735,7 +765,10 @@
       <span class="h1">Televisores</span>
     </div>
     <swiper-container slides-per-view="5" navigation="true" pagination="true">
-      <swiper-slide *ngFor="let item of listaMultiservicios">
+      <swiper-slide
+        *ngFor="let item of listaMultiservicios"
+        (click)="clickCard(item.nombre)"
+      >
         <!--Card-->
         <div class="card border me-3 mt-0">
           <!--Badge solo si hay oferta-->

@@ -1,0 +1,68 @@
+<div
+  style="--background: #002849; --color: white; --height: 60px"
+  class="bg-custom color-custom height-custom d-flex align-items-center justify-content-center mb-5"
+>
+  <swiper-container
+    class="detalleSwiper2"
+    slides-per-view="auto"
+    watch-slides-progress="true"
+  >
+    <swiper-slide>
+      <span class="mx-3">DESCRIPCION DEL PRODUCTO</span>
+    </swiper-slide>
+
+    <swiper-slide>
+      <span class="mx-3">ESPECIFICACIONES</span>
+    </swiper-slide>
+
+    <swiper-slide>
+      <span class="mx-3">CAMBIOS Y DEVOLUCIONES</span>
+    </swiper-slide>
+  </swiper-container>
+</div>
+
+<swiper-container
+  class="detalleSwiper container"
+  thumbs-swiper=".detalleSwiper2"
+  css-mode="true"
+>
+  <swiper-slide>
+    <p>{{ descripcion }}</p>
+  </swiper-slide>
+
+  <swiper-slide>
+    <table>
+      <tbody>
+        <tr *ngFor="let especificacion of especificaciones; let i = index">
+          <th>{{ especificaciones[i] }}</th>
+          <th>{{ campos[i] }}</th>
+        </tr>
+      </tbody>
+    </table>
+  </swiper-slide>
+
+  <swiper-slide>
+    <p class="h2">Cambios y Devoluciones</p>
+    <p>
+      Recuerda que cuentas con 10 días calendarios luego de haber recibido tu
+      compra, para solicitar el cambio o devolución de tu producto. Realízalo
+      acercándote a la tienda más cercana. La relación de tiendas se encuentra
+      aquí. Si tu producto es de gran dimensión, contáctanos al (01)200-2890 EFE
+      opción 4, para coordinar el recojo. Para que conozcas los requisitos,
+      opciones de cambio y mayor información puedes ingresar aquí.
+    </p>
+    <p class="h2">Garantía de Fábrica</p>
+    <p>
+      Todos los productos comercializados en efe.com.pe cuentan con una garantía
+      de fabricación, cuya vigencia y beneficios dependen del tipo de producto
+      adquirido. Cabe mencionar que cada fabricante determinará los términos de
+      las garantías ofrecidas y detalladas en su certificado para cada producto
+      específico que comercialicen. Si el producto adquirido tuviese algún
+      problema de funcionamiento contáctanos al (01)200-2890 EFE, nuestros
+      agentes te brindaran la asesoría necesaria para encaminar la solución que
+      corresponda.
+    </p>
+  </swiper-slide>
+</swiper-container>
+
+<app-footer></app-footer>

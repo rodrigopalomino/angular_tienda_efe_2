@@ -1,1 +1,31 @@
-<p>imagenes works!</p>
+<div class="imagenes">
+  <swiper-container
+    class="swiper2"
+    space-between="0"
+    slides-per-view="7"
+    watch-slides-progress="true"
+    direction="vertical"
+    (mouseenter)="loop_mouseenterr()"
+    [loop]="loop"
+    [rewind]="!loop"
+  >
+    <swiper-slide *ngFor="let imagen of imagenes">
+      <img [src]="imagen" />
+    </swiper-slide>
+  </swiper-container>
+
+  <swiper-container
+    class="swiper"
+    thumbs-swiper=".swiper2"
+    [loop]="loop"
+    space-between="5"
+    (mouseenter)="img_mouseenterr()"
+    (mouseleave)="img_mouseleave()"
+    [navigation]="navigations"
+    [rewind]="!loop"
+  >
+    <swiper-slide *ngFor="let imagen of imagenes">
+      <img src="{{ imagen }}" />
+    </swiper-slide>
+  </swiper-container>
+</div>

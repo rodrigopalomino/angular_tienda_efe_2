@@ -1,4 +1,4 @@
-<div [ngClass]="{ 'd-none': categorias.length == 0 }">
+<div [ngClass]="{ 'd-none': categorias.length == 0 }" *ngIf="search !== ''">
   <hr class="w-100 mt-0" />
 
   <span class="txt-16 font-weight-bold">Categoria</span>

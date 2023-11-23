@@ -35,4 +35,18 @@ export class ProductoService {
       `${this.myApi}${this.myApp}/count/${categoria}`
     );
   }
+
+  countSearchProducto(nombre: string): Observable<number> {
+    return this.http.get<number>(
+      `${this.myApi}${this.myApp}/countSearch/${nombre}`
+    );
+  }
+
+  searchProducto(nombre: string, inicio: number, cantidad: number) {
+    return this.http.post<Producto[]>(`${this.myApi}${this.myApp}/search`, {
+      nombre,
+      inicio,
+      cantidad,
+    });
+  }
 }

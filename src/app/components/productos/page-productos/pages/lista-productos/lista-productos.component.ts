@@ -16,6 +16,7 @@ import { ProductoService } from 'src/app/services/producto.service';
 })
 export class LisaProductosComponent implements OnInit, OnChanges {
   imagesPath: string = '../../../../assets/';
+  @Input() search: string = '';
   @Input() categoria_id!: number;
   @Input() page!: string;
   @Input() nombre!: string;
@@ -32,15 +33,42 @@ export class LisaProductosComponent implements OnInit, OnChanges {
   ) {}
 
   ngOnInit(): void {
-    this.getRow();
-    this.countProducto();
-    this.getProductos();
+    if (this.search == '') {
+      this.getRow();
+
+      this.countProducto();
+      this.getProductos();
+    } else {
+      this.getRow();
+
+      this.countSearchProducto();
+      this.searchProductos();
+    }
+  }
+
+  searchProductos() {
+    console.log('seacr= >', this.search);
+
+    this._productoServices
+      .searchProducto(
+        this.search,
+        this.cantidad * (this.row - 1),
+        this.cantidad
+      )
+      .subscribe((data) => {
+        this.listaProductos = data;
+        console.log(this.listaProductos);
+      });
   }
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['page']) {
-      this.getRow();
-      this.getProductos();
+      if (this.search == '') {
+        this.getRow();
+
+        this.getProductos();
+      }
+      this.searchProductos();
     }
   }
 
@@ -80,26 +108,45 @@ export class LisaProductosComponent implements OnInit, OnChanges {
       });
   }
 
+  countSearchProducto() {
+    this._productoServices
+      .countSearchProducto(this.search)
+      .subscribe((data) => {
+        this.ultimoRow = Math.ceil(data / this.cantidad);
+      });
+  }
+
   siguiente() {
-    console.log('siguiente');
+    if (this.search == '') {
+      this.row += 1;
+      this.router.navigate(['ver', this.nombre], {
+        queryParams: { page: this.row },
+      });
+      this.getProductos();
+    }
     this.row += 1;
-    this.router.navigate(['ver', this.nombre], {
+    this.router.navigate(['search', this.search], {
       queryParams: { page: this.row },
     });
-    this.getProductos();
+    this.searchProductos();
   }
 
   anterior() {
-    console.log('anterior');
+    if (this.search == '') {
+      this.row -= 1;
+      this.router.navigate(['ver', this.nombre], {
+        queryParams: { page: this.row },
+      });
+      this.getProductos();
+    }
     this.row -= 1;
-    this.router.navigate(['ver', this.nombre], {
+    this.router.navigate(['search', this.search], {
       queryParams: { page: this.row },
     });
-    this.getProductos();
+    this.searchProductos();
   }
 
   clickCard(nombre: string) {
-    console.log('click', nombre);
     this.router.navigate([nombre]);
   }
 }

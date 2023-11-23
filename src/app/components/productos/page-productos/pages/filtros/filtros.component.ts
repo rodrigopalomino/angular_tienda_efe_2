@@ -10,6 +10,7 @@ import { CategoriaService } from 'src/app/services/categoria.service';
 })
 export class FiltrosComponent implements OnInit {
   @Input() categoria_id!: number;
+  @Input() search!: string;
 
   categorias: Categoria[] = [];
 

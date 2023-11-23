@@ -14,6 +14,7 @@ export class HomeProductosComponent implements OnInit {
   subcategoria: string = '';
   page: string = '';
   categoriaActual!: Categoria;
+  nombre!: string;
 
   constructor(
     private route: ActivatedRoute,
@@ -23,6 +24,8 @@ export class HomeProductosComponent implements OnInit {
       this.general = params['general'];
       this.categoria = params['categoria'];
       this.subcategoria = params['subcategoria'];
+      this.nombre = params['nombre'];
+      console.log(this.nombre);
     });
     this.route.queryParams.subscribe((queryParams) => {
       this.page = queryParams['page'] || 1;

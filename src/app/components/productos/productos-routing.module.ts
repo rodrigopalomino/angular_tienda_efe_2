@@ -17,6 +17,10 @@ const routes: Routes = [
     component: HomeProductosComponent,
   },
   {
+    path: 'search/:nombre',
+    component: HomeProductosComponent,
+  },
+  {
     path: ':nombre',
     component: HomeProductoComponent,
   },
